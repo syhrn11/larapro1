@@ -40,6 +40,18 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         //
+        \App\Tasks::create([
+
+        'name' => $request->name,
+
+        'pic' => $request->pic,
+
+        'email' => $request->email,
+
+        'phone' => $request->phone,
+    ]);
+    
+    return redirect ('tasks');
     }
 
     /**

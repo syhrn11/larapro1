@@ -19,6 +19,7 @@
                     @endif
 
                     <form action="{{ url('tasks') }}" method="POST">
+                        {{csrf_field()}}
                         <div class="form-group">
                             <label>Task name</label>
                             <input type="text" name="name" class="form-control">
